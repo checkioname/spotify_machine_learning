@@ -1,0 +1,4 @@
+apache-airflow==2.8.0
+numpy=1.22.4
+pandas=2.1.4
+spotipy=2.23.0

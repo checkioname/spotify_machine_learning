@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./app:/app
+    depends_on:
+      - airflow
+  airflow:
+    image: apache/airflow:2.1.2-python3.8
+    restart: always
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////usr/local/airflow/airflow.db
+    volumes:
+      - ./airflow:/opt/airflow
