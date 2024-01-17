@@ -33,4 +33,4 @@ df = pd.DataFrame({
     'Genero' : [artist_info['genres']]
 })
 
-df
+display(df)
